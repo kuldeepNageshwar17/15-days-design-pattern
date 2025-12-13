@@ -1,0 +1,146 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container {
+  color: #000;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 400px;
+  position: relative;
+}
+.modal-header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f9f9f9;
+  border: none;
+}
+.accordion-content {
+  padding: 0.5rem;
+  background: #fff;
+}
+
+/* Card component styles */
+.card-container {
+  max-width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.card-container:focus-within {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.card-header {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+.card-header h4 {
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+.card-body {
+  padding: 1rem;
+  color: #333;
+  line-height: 1.4;
+  flex: 1 0 auto;
+}
+.card-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+  text-align: right;
+}
+
+/* Tabs styles */
+.tabs-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.tab {
+  background: #f3f4f6;
+  color: #000;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tab:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+.tab-active {
+  background: #2563eb;
+  color: white;
+  border-color: #1e40af;
+}
+.tab-panel {
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+  color: #000;
+  border-radius: 6px;
+  background: #fff;
+}
+
+@media (max-width: 420px) {
+  .card-container {
+    max-width: 100%;
+  }
+  .card-image img {
+    height: 160px;
+  }
+}
